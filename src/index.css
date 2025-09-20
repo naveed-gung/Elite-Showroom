@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Elite Showroom Design System - Luxury Automotive Experience
+   Glassmorphism inspired by Apple's design language with automotive luxury
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 4%;          /* Deep black for luxury */
+    --foreground: 0 0% 98%;         /* Pure white text */
+
+    /* Glass System */
+    --glass: 0 0% 100% / 0.08;      /* Ultra-subtle white glass */
+    --glass-strong: 0 0% 100% / 0.12; /* Slightly stronger glass */
+    --glass-stroke: 0 0% 100% / 0.15; /* Glass border */
+    --glass-active: 0 0% 100% / 0.18; /* Active glass state */
+
+    /* Interactive States */
+    --primary: 0 0% 98%;            /* Pure white for primary actions */
+    --primary-foreground: 0 0% 4%;  /* Dark text on white */
+
+    --secondary: 0 0% 100% / 0.06;  /* Subtle glass secondary */
+    --secondary-foreground: 0 0% 88%; /* Light grey text */
+
+    --muted: 0 0% 100% / 0.04;      /* Very subtle glass */
+    --muted-foreground: 0 0% 65%;   /* Muted text */
+
+    --accent: 0 0% 100% / 0.08;     /* Accent glass */
+    --accent-foreground: 0 0% 95%;  /* High contrast text */
+
+    /* System Colors */
+    --destructive: 0 72% 51%;       /* Elegant red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 100% / 0.08;     /* Subtle borders */
+    --input: 0 0% 100% / 0.06;      /* Input backgrounds */
+    --ring: 0 0% 100% / 0.2;        /* Focus rings */
+
+    /* Layout */
+    --radius: 1rem;                 /* Larger radius for luxury feel */
+    --navbar-height: 4rem;          /* 64px navbar */
+    --footer-height: 3.5rem;        /* 56px footer */
+    --sidebar-width: 5.25rem;       /* 84px sidebar */
+    --sidebar-gap: 0.5rem;          /* 8px gap */
+
+    /* Typography Scale */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Single theme - luxury dark mode only */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  /* Glassmorphism Components */
+  .glass {
+    @apply backdrop-blur-lg border;
+    background: hsl(var(--glass));
+    border-color: hsl(var(--glass-stroke));
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-lg border;
+    background: hsl(var(--glass-strong));
+    border-color: hsl(var(--glass-stroke));
+  }
+
+  .glass-active {
+    @apply backdrop-blur-lg border-2;
+    background: hsl(var(--glass-active));
+    border-color: hsl(var(--glass-stroke));
+  }
+
+  /* Typography Components */
+  .title-display {
+    font-family: var(--font-display);
+    @apply text-2xl md:text-3xl font-semibold tracking-wide;
+  }
+
+  .title-section {
+    font-family: var(--font-display);
+    @apply text-xl md:text-2xl font-medium tracking-wide;
+  }
+
+  .body-elegant {
+    font-family: var(--font-sans);
+    @apply text-sm md:text-base font-light tracking-wide;
+  }
+
+  .text-luxury {
+    font-family: var(--font-display);
+    @apply tracking-wider;
+  }
+
+  /* Interactive States */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:scale-[1.02];
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out hover:shadow-lg;
+  }
+
+  /* macOS-style keyboard overlay */
+  .mac-keys-overlay {
+    position: fixed;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    z-index: 40;
+    pointer-events: none;
+  }
+
+  .mac-keys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .mac-keys-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .mac-key {
+    min-width: 38px;
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.5px;
+    background: linear-gradient(180deg, #3b3b3f, #222226);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.18),
+      inset 0 -1px 0 rgba(0,0,0,0.35),
+      0 6px 14px rgba(0,0,0,0.35);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+  }
+
+  .mac-key-up {
+    min-width: 50px;
+  }
+
+  @keyframes macKeyPress {
+    0%, 100% {
+      transform: translateY(0);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -1px 0 rgba(0,0,0,0.35),
+        0 6px 14px rgba(0,0,0,0.35);
+      filter: drop-shadow(0 0 0 rgba(255,255,255,0));
+    }
+    5%, 20% {
+      transform: translateY(1px);
+      box-shadow:
+        inset 0 0px 0 rgba(255,255,255,0.12),
+        inset 0 -1px 0 rgba(0,0,0,0.5),
+        0 3px 8px rgba(0,0,0,0.5);
+      background: linear-gradient(180deg, #343439, #1f1f23);
+    }
+    8% {
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
+    }
+  }
+
+  .animate-press {
+    animation: macKeyPress 3.2s ease-in-out infinite;
+  }
+
+  /* Top-center W hint */
+  .w-hint-overlay {
+    position: fixed;
+  top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 40;
+    pointer-events: none; /* fully transparent click-through */
+  }
+
+  .w-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent; /* fully transparent wrapper */
+  }
+
+  /* Mobile on-screen controls */
+  .mobile-controls {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 40;
+  }
+
+  .mc-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .mc-btn {
+    min-width: 56px;
+    height: 52px;
+    padding: 0 14px;
+    border-radius: 14px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.92);
+    background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.2),
+      inset 0 -1px 0 rgba(0,0,0,0.4),
+      0 8px 22px rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    user-select: none;
+    touch-action: manipulation;
+  }
+
+  .mc-btn:active {
+    transform: translateY(1px);
+    box-shadow:
+      inset 0 0px 0 rgba(255,255,255,0.15),
+      inset 0 -1px 0 rgba(0,0,0,0.55),
+      0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .mc-w {
+    min-width: 80px;
+    height: 64px;
+    font-size: 22px;
+  }
+
+  /* Rotate to landscape overlay */
+  .rotate-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.7);
+    z-index: 50;
+  }
+
+  .rotate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  }
+
+  .rotate-icon {
+    font-size: 28px;
+  }
+
+  .rotate-text {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+}
