@@ -2,6 +2,8 @@
 
 # Elite Showroom — A Cinematic 3D Car Experience
 
+  <img src="client/public/placeholder.png" alt="Elite Showroom Screenshot" width="800"/>
+
 Luxury-grade, Blender-authored visuals brought to the web with React Three Fiber, tailored camera stages, and a glassmorphic UI. Explore cars by country, glide through interior/exterior shots, and control the scene’s mood with an iOS‑style brightness control.
 
 </div>
