@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="logo.svg" alt="Elite Showroom Logo" width="200"/>
+
 # Elite Showroom — A Cinematic 3D Car Experience
 
   <img src="public/image.png" alt="Elite Showroom Screenshot" width="800"/>
@@ -10,7 +12,7 @@ Luxury-grade, Blender-authored visuals brought to the web with React Three Fiber
 
 ---
 
-## ✨ Highlights
+## <img src="icons/highlights.svg" alt="Highlights" width="20" height="20" style="vertical-align: middle;"/> Highlights
 
 - Cinematic camera stages: 0→3 view flow with stage-specific info overlays.
 - Blender‑first material authoring for accurate paint, glass, rims, brakes, logos.
@@ -23,7 +25,7 @@ Social sharing ready: `public/image.png` is used as the Open Graph/Twitter previ
 
 ---
 
-## 🧭 Project Structure
+## <img src="icons/project-structure.svg" alt="Project Structure" width="20" height="20" style="vertical-align: middle;"/> Project Structure
 
 Key files and folders:
 
@@ -38,7 +40,7 @@ Key files and folders:
 
 ---
 
-## 🚀 Getting Started
+## <img src="icons/getting-started.svg" alt="Getting Started" width="20" height="20" style="vertical-align: middle;"/> Getting Started
 
 Requirements: Node.js 18+ (use nvm), npm.
 
@@ -51,7 +53,7 @@ Requirements: Node.js 18+ (use nvm), npm.
 
 ---
 
-## 🎮 Controls
+## <img src="icons/controls.svg" alt="Controls" width="20" height="20" style="vertical-align: middle;"/> Controls
 
 - Arrow Up/Down — Cycle camera stages (0→3 wrap).
 - Interior (stage 2): Hold W to subtly “accelerate” (audio + fov + shake).
@@ -60,7 +62,7 @@ Requirements: Node.js 18+ (use nvm), npm.
 
 ---
 
-## 📷 Stages & Overlays
+## <img src="icons/stages.svg" alt="Stages & Overlays" width="20" height="20" style="vertical-align: middle;"/> Stages & Overlays
 
 - 0 — Name + Year (lower, non‑obstructive)
 - 1 — Price (right, min‑height 50px)
@@ -71,7 +73,7 @@ Blender‑like motion design using framer‑motion (fade, slight blur, scale).
 
 ---
 
-## 🏗️ Architecture Notes
+## <img src="icons/architecture.svg" alt="Architecture Notes" width="20" height="20" style="vertical-align: middle;"/> Architecture Notes
 
 - React + TypeScript + Vite
 - @react-three/fiber + drei for 3D & GLTF
@@ -82,7 +84,7 @@ Lighting: Rect area + directional + spot + ambient lights, all scaled by store `
 
 ---
 
-## 📦 Assets & Performance
+## <img src="icons/assets.svg" alt="Assets & Performance" width="20" height="20" style="vertical-align: middle;"/> Assets & Performance
 
 Large GLBs are preloaded via drei (`useGLTF.preload`) and prefetched to warm HTTP caches. For slow networks and production scale, enable these optimizations:
 
@@ -99,7 +101,7 @@ Optional: Add a visible loading progress bar (drei’s `useProgress`) for transp
 
 ---
 
-## 🧪 Scripts
+## <img src="icons/scripts.svg" alt="Scripts" width="20" height="20" style="vertical-align: middle;"/> Scripts
 
 - dev — Start Vite dev server
 - build — Production build
@@ -108,7 +110,7 @@ Optional: Add a visible loading progress bar (drei’s `useProgress`) for transp
 
 ---
 
-## 🔧 Configuration
+## <img src="icons/configuration.svg" alt="Configuration" width="20" height="20" style="vertical-align: middle;"/> Configuration
 
 - `index.html` — Title, description, Open Graph/Twitter tags, favicon.
 - `tailwind.config.ts` — Design tokens & variants.
@@ -121,7 +123,7 @@ Environment variables (optional suggestions):
 
 ---
 
-## ♿ Accessibility & UX
+## <img src="icons/accessibility.svg" alt="Accessibility & UX" width="20" height="20" style="vertical-align: middle;"/> Accessibility & UX
 
 - Pointer‑coarse detection for mobile; large tap targets.
 - Non‑passive wheel handlers only when needed (prevents page scroll during stage nav).
@@ -129,7 +131,7 @@ Environment variables (optional suggestions):
 
 ---
 
-## 📣 Social & SEO
+## <img src="icons/social.svg" alt="Social & SEO" width="20" height="20" style="vertical-align: middle;"/> Social & SEO
 
 - Favicon: `public/favicon.svg`
 - Share preview: `public/image.png` via `og:image` and `twitter:image`
@@ -137,7 +139,7 @@ Environment variables (optional suggestions):
 
 ---
 
-## 🗺️ Roadmap Ideas
+## <img src="icons/roadmap.svg" alt="Roadmap Ideas" width="20" height="20" style="vertical-align: middle;"/> Roadmap Ideas
 
 - Photo Mode with DoF, exposure, vignetting, and composition guides.
 - Lighting “Moods”: Studio / Night Neon / Sunset Garage + environment swaps.
@@ -148,6 +150,6 @@ Environment variables (optional suggestions):
 
 ---
 
-## 📝 License
+## <img src="icons/license.svg" alt="License" width="20" height="20" style="vertical-align: middle;"/> License
 
 This project is provided as‑is for demonstration and learning. Replace with your preferred license if you plan to deploy commercially.
