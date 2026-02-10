@@ -1,30 +1,127 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background circle with gradient -->
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    <!-- Premium dark gradient background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Chrome/silver gradient for car -->
+    <linearGradient id="carGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#cbd5e1;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#94a3b8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#64748b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Metallic accent gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Rim gradient -->
+    <radialGradient id="rimGradient">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Window tint gradient -->
+    <linearGradient id="windowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.9" />
     </linearGradient>
   </defs>
   
-  <!-- Main circle background -->
-  <circle cx="100" cy="100" r="95" fill="url(#logoGradient)" stroke="#ffffff" stroke-width="2"/>
+  <!-- Outer ring with premium border -->
+  <circle cx="100" cy="100" r="97" fill="url(#bgGradient)"/>
+  <circle cx="100" cy="100" r="97" fill="none" stroke="url(#accentGradient)" stroke-width="2"/>
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#0f172a" stroke-width="0.5" opacity="0.5"/>
   
-  <!-- Car silhouette -->
-  <path d="M 50 110 L 60 90 L 80 85 L 120 85 L 140 90 L 150 110 Z" fill="#ffffff" opacity="0.9"/>
-  <rect x="55" y="110" width="90" height="15" rx="2" fill="#ffffff" opacity="0.9"/>
+  <!-- Decorative accent lines (top) -->
+  <path d="M 40 50 L 160 50" stroke="url(#accentGradient)" stroke-width="1" opacity="0.3"/>
+  <path d="M 50 55 L 150 55" stroke="url(#accentGradient)" stroke-width="0.5" opacity="0.2"/>
   
-  <!-- Wheels -->
-  <circle cx="70" cy="125" r="10" fill="#1e293b" stroke="#ffffff" stroke-width="2"/>
-  <circle cx="130" cy="125" r="10" fill="#1e293b" stroke="#ffffff" stroke-width="2"/>
-  <circle cx="70" cy="125" r="4" fill="#64748b"/>
-  <circle cx="130" cy="125" r="4" fill="#64748b"/>
+  <!-- Luxury car silhouette - more detailed -->
+  <!-- Car body top (roofline) -->
+  <path d="M 60 95 L 68 82 L 85 78 L 115 78 L 132 82 L 140 95" 
+        fill="url(#carGradient)" stroke="#94a3b8" stroke-width="0.5"/>
   
-  <!-- Windows -->
-  <path d="M 65 90 L 75 85 L 95 85 L 95 95 Z" fill="#3b82f6" opacity="0.6"/>
-  <path d="M 105 85 L 125 85 L 135 90 L 105 95 Z" fill="#3b82f6" opacity="0.6"/>
+  <!-- Car body main -->
+  <path d="M 52 95 L 60 95 L 140 95 L 148 95 L 148 110 L 52 110 Z" 
+        fill="url(#carGradient)" stroke="#94a3b8" stroke-width="0.5"/>
   
-  <!-- Elite text -->
-  <text x="100" y="160" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">ELITE</text>
-  <text x="100" y="178" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle">SHOWROOM</text>
+  <!-- Hood and trunk accent lines -->
+  <line x1="58" y1="95" x2="58" y2="110" stroke="#cbd5e1" stroke-width="0.3" opacity="0.5"/>
+  <line x1="142" y1="95" x2="142" y2="110" stroke="#cbd5e1" stroke-width="0.3" opacity="0.5"/>
+  
+  <!-- Front windshield -->
+  <path d="M 68 82 L 78 78 L 90 78 L 90 92 Z" 
+        fill="url(#windowGradient)"/>
+  
+  <!-- Rear windshield -->
+  <path d="M 110 78 L 122 78 L 132 82 L 110 92 Z" 
+        fill="url(#windowGradient)"/>
+  
+  <!-- Side windows -->
+  <rect x="92" y="82" width="16" height="10" fill="url(#windowGradient)" opacity="0.8"/>
+  
+  <!-- Door panel detail -->
+  <rect x="70" y="98" width="60" height="8" rx="1" fill="#475569" opacity="0.3"/>
+  
+  <!-- Chrome trim at bottom -->
+  <rect x="54" y="109" width="92" height="2" rx="1" fill="#cbd5e1" opacity="0.9"/>
+  
+  <!-- Wheels - detailed -->
+  <circle cx="73" cy="112" r="12" fill="url(#rimGradient)"/>
+  <circle cx="127" cy="112" r="12" fill="url(#rimGradient)"/>
+  
+  <!-- Tire outer ring -->
+  <circle cx="73" cy="112" r="12" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <circle cx="127" cy="112" r="12" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  
+  <!-- Rim details (spokes) -->
+  <circle cx="73" cy="112" r="7" fill="#64748b"/>
+  <circle cx="127" cy="112" r="7" fill="#64748b"/>
+  <circle cx="73" cy="112" r="3" fill="#334155"/>
+  <circle cx="127" cy="112" r="3" fill="#334155"/>
+  
+  <!-- Rim highlights -->
+  <circle cx="73" cy="112" r="8" fill="none" stroke="#94a3b8" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="127" cy="112" r="8" fill="none" stroke="#94a3b8" stroke-width="0.5" opacity="0.6"/>
+  
+  <!-- Headlight and taillight accents -->
+  <ellipse cx="54" cy="102" rx="2" ry="3" fill="#fbbf24" opacity="0.8"/>
+  <ellipse cx="146" cy="102" rx="2" ry="3" fill="#ef4444" opacity="0.8"/>
+  
+  <!-- Decorative accent lines (bottom) -->
+  <path d="M 50 145 L 150 145" stroke="url(#accentGradient)" stroke-width="0.5" opacity="0.2"/>
+  <path d="M 40 150 L 160 150" stroke="url(#accentGradient)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Brand text with premium styling -->
+  <text x="100" y="165" 
+        font-family="'Cormorant Garamond', 'Times New Roman', serif" 
+        font-size="28" 
+        font-weight="700" 
+        fill="#f1f5f9" 
+        letter-spacing="3"
+        text-anchor="middle">ELITE</text>
+  
+  <text x="100" y="180" 
+        font-family="'Inter', 'Arial', sans-serif" 
+        font-size="11" 
+        font-weight="400" 
+        fill="#94a3b8" 
+        letter-spacing="4"
+        text-anchor="middle">SHOWROOM</text>
+  
+  <!-- Subtle shine/reflection effect on car -->
+  <path d="M 75 85 Q 100 83 125 85" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        opacity="0.3" 
+        fill="none"/>
 </svg>
